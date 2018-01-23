@@ -1,11 +1,16 @@
 
+//RandomUser Generated From URL 
+
 $(document).ready(function(){
   const url = 'https://randomuser.me/api/?results=12&inc=name,email,picture,location,cell,login,dob&nat=us';
 
 $.getJSON(url,function (data) {
   var overlay = $("body").append("<div id= 'overlay'></div>");
   	for (i = 0; i < 12; i++) {
-  	const array = data.results;
+  
+// Defined Variables 
+
+  const array = data.results;
  	var email = array[i].email;
  	var city = array[i].location.city; 
  	var pictureSmall = array[i].picture.thumbnail;
@@ -21,6 +26,8 @@ $.getJSON(url,function (data) {
   let empCard = document.getElementsByClassName('list-');
   let modCard = document.getElementsByClassName('overlay');
 
+// Creating Individual User Tabs
+
   	var status = $('#col-1').append('<ul value="'+ (i) + '"  class="list-" id="rist-'+ i + '" ></ul>');
   	console.log(array)
   	 //Overlay div
@@ -31,7 +38,8 @@ $.getJSON(url,function (data) {
   	$('#inside-list-' + i +'').append('<li class="username-col in">' + userName + '</li>');
   	$('#inside-list-' + i +'').append('<li class=" city-col in">' + city + '</li>');
 
-  	//Modal div
+//Modal div
+
 	var modal = "<div id='modal" + i + "'>";
 	modal += '<ul><span class="closebtn"><button>×</button></span><li><li class="top-container"><img class="picture modal" src="' + pictureLarge + '">';
 	modal += '<section class="top">'
@@ -46,11 +54,14 @@ $.getJSON(url,function (data) {
 	modal += '</ul>';
 	modal += '</div>';
 	
+//Create Tabs 
 
 	var modalCell = $('#overlay').append("<div id='modal" + i +"' class='overlay'></div>");
 	var coral = $('#modal' + i +'').append(modal);
   $(modCard).css("display", "none");
  
+// Click function for each Tab
+
 $(".list-").click(function() {
         $('#background').css("visibility", "visible");
         $('#overlay').css("z-index", "5");
@@ -80,10 +91,3 @@ $(".list-").click(function() {
  });
 
 });
-
-
-
-
-
-
-
