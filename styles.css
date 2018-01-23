@@ -31,9 +31,8 @@ section{
 	border:1px solid #c0bfbf;
 	border-radius:8px;
 	justify-content: space-evenly;
-    width: 29%;
     flex-direction: row;
-    margin:20px;
+    margin: 20px auto;
    
 
 }
@@ -46,12 +45,12 @@ section{
 .photo-cont{
 	justify-content: space-evenly;
 	display:inline-flex;
-	margin-top: 30px;
+	margin: 30px;
 	
 }
 
 .data-list-{
-margin-top: 45px;
+	margin:30px;
 
 }
 
@@ -88,7 +87,7 @@ margin-top: 45px;
     left: 150%;
     background-color: #fff;
     border-radius: 5px;
-    width: 40%;
+    width: 50%;
     border: 1px solid grey;
     height: 415px;
     z-index: 1000;
@@ -105,7 +104,9 @@ margin-top: 45px;
 }
 
 .closebtn{
-	margin-left: 700px;
+	float: right;
+    position: relative;
+    left: -20px;
 }
 
 .city-modal {
