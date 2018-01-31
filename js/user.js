@@ -70,16 +70,21 @@ $(".list-").click(function() {
         $(modCard[index]).css("left", "28%");
         $(modCard[index]).css("transition", "left .5s ease-in");
         $(modCard[index]).css("display", "");
+        });
         $("button").click(function(){
 		$("#background").css("visibility", "hidden");
 		$('#overlay').css("z-index", "");
 		let index = $(this).index();
-		$('.overlay').css("left", "150%");
+    $('.overlay').css("left", "150%");
+    $('.overlay').css("display", "none");
+    $('.overlay').css("transition", "");
+
+
 
 
 	
 
-				});
+				
       });//end open modal click
 
 
@@ -91,3 +96,10 @@ $(".list-").click(function() {
  });
 
 });
+
+
+
+
+
+
+
